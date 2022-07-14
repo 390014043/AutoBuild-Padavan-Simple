@@ -2,17 +2,11 @@
 name: Build Padavan
 
 on: 
-  release:
-    types: [published]
   push:
-    tags:
-    - 'v*'
-  #  branches: 
-  #    - master
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
-    types: [started]
+    branches: 
+      - main
+    paths: 
+      - logs/redmi_ac2100.md
 
 jobs:
   build:
